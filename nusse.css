@@ -66,6 +66,14 @@ h1 {
   font-weight: bold;
 }
 
+#schuldaten>tbody>tr>td:nth-child(odd) {
+  text-align: right;
+}
+
+#schuldaten>tbody>tr>td:nth-child(even) {
+  text-align: left;
+}
+
 .welcome {
   font-size: 2em;
   font-weight: bold;
