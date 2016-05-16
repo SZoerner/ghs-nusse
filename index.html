@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Willkommen in der Grundschule Nusse</title>
+
+    <!-- Bootstrap minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- specific stylesheet -->
+    <link href="nusse.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body onload="$('#user-content').load('content/unsere_schule.html');">
+  <div class="header">
+    <div class="welcome">
+      <img class="header-message header-left" src="images/schule_logo.png"/>
+        Willkommen in der Grundschule Nusse
+      <img class="header-message" src="images/schule_logo.png"/>
+    </div>
+  </div>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default">
+        <div id="navbar">
+            <ul class="nav navbar-nav">
+                <li><a href="#" onclick="$('#user-content').load('content/unsere_schule.html');">Startseite</a></li>
+                <li><a href="#" onclick="$('#user-content').load('content/schulleitung.html');">Schulleitung</a></li>
+                <li><a href="#">Unsere Schule</a></li>
+                <li><a href="#">Das Team</a></li>
+                <li><a href="#">Schulsozialarbeit</a></li>
+                <li><a href="#">Schulverein</a></li>
+                <li><a href="#">Archiv</a></li>
+                <li><a href="#">Projekte</a></li>
+                <li><a href="#">Aktuelles</a></li>
+                <li><a href="#">Schulprogramm</a></li>
+                <li><a href="#">Schülerarbeiten</a></li>
+                <li><a href="#">Ganztagsschule</a></li>
+                <li><a href="#">Termine</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Second level navigation -->
+    <div id="sidebar-wrapper">
+        <!-- <div class=""> -->
+            <ul class="nav nav-sidebar col-xs-3 sidebar">
+                <li class="active"><a href="#">Unsere Schule<span class="sr-only">(current)</span></a></li>
+                <li><a href="#">Schuldaten</a></li>
+            </ul>
+        <!-- </div> -->
+      </div>
+        <!-- main content -->
+        <div id="user-content" class="col-xs-8 col-xs-offset-3 main">
+    </div>
+    <div class='col-xs-offset-11'></div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</body>
+
+</html>
