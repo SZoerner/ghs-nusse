@@ -21,13 +21,12 @@
 </head>
 
 <body onload="$('#user-content').load('content/unsere_schule.html');">
-  <div class="header">
-    <div class="welcome">
-      <img class="header-message header-left" src="images/schule_logo.png"/>
-        Willkommen in der Grundschule Nusse
-      <img class="header-message" src="images/schule_logo.png"/>
+    <div class="header">
+        <div class="welcome">
+            <img class="header-message header-left" src="images/schule_logo.png" /> Willkommen in der Grundschule Nusse
+            <img class="header-message" src="images/schule_logo.png" />
+        </div>
     </div>
-  </div>
     <!-- Fixed navbar -->
     <nav class="navbar navbar-default">
         <div id="navbar">
@@ -49,18 +48,19 @@
         </div>
     </nav>
     <!-- Second level navigation -->
-    <div id="sidebar-wrapper">
+    <div id="middle">
         <!-- <div class=""> -->
-            <ul class="nav nav-sidebar col-xs-3 sidebar">
-                <li class="active"><a href="#" onclick="$('#user-content').load('content/unsere_schule.html');">Unsere Schule<span class="sr-only">(current)</span></a></li>
-                <li><a href="#" onclick="$('#user-content').load('content/schuldaten.html');">Schuldaten</a></li>
-            </ul>
+        <ul class="nav nav-sidebar col-xs-3 sidebar">
+            <li class="active"><a href="#" onclick="$('#user-content').load('content/unsere_schule.html');">Unsere Schule<span class="sr-only">(current)</span></a></li>
+            <li><a href="#" onclick="$('#user-content').load('content/schuldaten.html');">Schuldaten</a></li>
+        </ul>
+        <img src="images/haende.png" style="position:absolute;margin-top:100px;" />
+
         <!-- </div> -->
-      </div>
-        <!-- main content -->
-        <div id="user-content" class="col-xs-8 col-xs-offset-3 main">
-    </div>
+    <!-- main content -->
+    <div id="user-content" class="col-xs-8 col-xs-offset-3 main"></div>
     <div class='col-xs-offset-11'></div>
+  </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
