@@ -20,7 +20,7 @@
     <![endif]-->
 </head>
 
-<body onload="$('#user-content').load('content/unsere_schule.html');">
+<body onload="$('#navigation').load('content/navigation.html');$('#user-content').load('content/unsere_schule.html');">
     <div class="header">
         <div class="welcome">
             <img class="header-message header-left" src="images/schule_logo.png" /> Willkommen in der Grundschule Nusse
@@ -28,35 +28,7 @@
         </div>
     </div>
     <!-- Fixed navbar -->
-    <nav class="navbar navbar-default">
-        <div id="navbar">
-            <ul class="nav navbar-nav">
-                <li><a href="#" onclick="$('#user-content').load('content/unsere_schule.html');">Startseite</a></li>
-                <li><a href="#" onclick="$('#user-content').load('content/schulleitung.html');">Schulleitung</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Unsere Schule<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#" onclick="$('#user-content').load('content/schuldaten.html');">Schuldaten</a></li>
-                        <li><a href="#" onclick="$('#user-content').load('content/verwaltung');">Verwaltung</a></li>
-
-                        <li><a href="#" onclick="$('#user-content').load('content/raumplan.html');">Raumplan</a></li>
-                        <li><a href="#" onclick="$('#user-content').load('content/stundenplaene.html');">Stundenpläne</a></li>
-                        <li><a href="#" onclick="$('#user-content').load('content/fahrplaene.html');">Fahrpläne</a></li>
-                    </ul>
-                </li>
-                <li><a href="#" onclick="$('#user-content').load('content/team.html');">Das Team</a></li>
-                <li><a href="#" onclick="$('#user-content').load('content/sozialarbeit.html');">Schulsozialarbeit</a></li>
-                <li><a href="#" onclick="$('#user-content').load('content/projekte.html');">Schulverein</a></li>
-                <li><a href="#" onclick="$('#user-content').load('content/patengemeinschaft.html');">Archiv</a></li>
-                <li><a href="#" onclick="$('#user-content').load('content/gesunde_schule.html');">Projekte</a></li>
-                <li><a href="#" onclick="$('#user-content').load('content/einschulung_2016.html');">Aktuelles</a></li>
-                <li><a href="#" onclick="$('#user-content').load('content/wer_sind_wir.html');">Schulprogramm</a></li>
-                <li><a href="#" onclick="$('#user-content').load('content/hundertwasser.html');">Schülerarbeiten</a></li>
-                <li><a href="#" onclick="$('#user-content').load('content/beschreibung.html');">Ganztagsschule</a></li>
-                <li><a href="#" onclick="$('#user-content').load('content/termine.html');">Termine</a></li>
-            </ul>
-        </div>
-    </nav>
+    <nav id="navigation" class="navbar navbar-default"></nav>
 
     <div id="sidebar">
         <img src="images/haende.png" width="18%" style="position:absolute;" />
@@ -65,11 +37,10 @@
     <!-- main content -->
     <div id="user-content" class="col-xs-9 col-xs-offset-2 main"></div>
     <div class='col-xs-offset-11'></div>
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Latest compiled and minified JavaScript -->
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!-- Compiled and minified Bootstrap JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 </body>
-
 </html>
