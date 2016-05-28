@@ -37,6 +37,19 @@ h1 {
   text-align: left;
 }
 
+#schulteich figure {
+  float:left;
+  margin: 5px;
+}
+
+#schulteich figcaption {
+  text-align: center;
+}
+
+#schulteich img {
+  width: 300px;
+}
+
 .welcome {
   font-size: 2em;
   font-weight: bold;
