@@ -39,7 +39,7 @@ h1 {
 
 #schulteich figure {
   float:left;
-  margin: 5px;
+  margin: 10px;
 }
 
 #schulteich figcaption {
@@ -48,6 +48,10 @@ h1 {
 
 #schulteich img {
   width: 300px;
+}
+
+#schulteich img.gross {
+  width: 400px;
 }
 
 .welcome {
