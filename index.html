@@ -20,7 +20,7 @@
     <![endif]-->
 </head>
 
-<body onload="$('#navigation').load('content/navigation.html');$('#user-content').load('content/unsere_schule.html');">
+<body onload="$('#user-content').load('unsere_schule.html');">
     <div class="header">
         <div class="welcome">
             <img class="header-message header-left" src="images/schule_logo.png" /> Willkommen in der Grundschule Nusse
@@ -28,7 +28,57 @@
         </div>
     </div>
     <!-- Fixed navbar -->
-    <nav id="navigation" class="navbar navbar-default"></nav>
+    <nav id="navigation" class="navbar navbar-default">
+      <div id="navbar">
+          <ul class="nav navbar-nav">
+              <li><a href="unsere_schule.html">Startseite</a></li>
+              <li><a href="schulleitung.html">Schulleitung</a></li>
+              <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Unsere Schule<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                      <li><a href="schuldaten.html">Schuldaten</a></li>
+                      <li><a href="verwaltung.html">Verwaltung</a></li>
+                      <li><a href="images/raumplan.pdf">Raumplan</a></li>
+                      <li><a href="stundenplaene.html">Stundenpläne</a></li>
+                      <li><a href="fahrplaene.html">Fahrpläne</a></li>
+                  </ul>
+              </li>
+              <li><a href="kollegium.html">Kollegium</a></li>
+              <li><a href="sozialarbeit.html">Schulsozialarbeit</a></li>
+              <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Schulverein<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                      <li><a href="projekte.html">Projekte</a></li>
+                      <li><a href="allgemeines.html">Allgemeines</a></li>
+                      <li><a href="images/beitrittserklaerung.pdf">Formular</a></li>
+                      <li><a href="images/schulverein-einladung.pdf">Jahreshauptversammlung 2015</a></li>
+                  </ul>
+              </li>
+              <li><a href="patengemeinschaft.html">Archiv</a></li>
+              <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projekte<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                      <li><a href="gesunde_schule.html">Gesunde Schule</a></li>
+                      <li><a href="trinkbrunnen.html">Trinkbrunnen</a></li>
+                      <li><a href="schulteich.html">Natur AG -Schulteich</a></li>
+                  </ul>
+              </li>
+              <li><a href="einschulung_2016.html">Aktuelles</a></li>
+              <li><a href="wer_sind_wir.html">Schulprogramm</a></li>
+              <li><a href="hundertwasser.html">Schülerarbeiten</a></li>
+              <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ganztagsschule<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                      <li><a href="beschreibung.html">Beschreibung</a></li>
+                      <li><a href="theatergruppe.html">Theatergruppe</a></li>
+                      <li><a href="anmeldung.html">Anmeldeformular</a></li>
+                      <li><a href="satzung.html">Satzung</a></li>
+                  </ul>
+              </li>
+              <li><a href="termine.html">Termine</a></li>
+          </ul>
+      </div>
+    </nav>
 
     <div id="sidebar">
         <img src="images/haende.png" width="18%" style="position:absolute;" />
@@ -42,5 +92,35 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Compiled and minified Bootstrap JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="jquery.history.js"></script>
+    <script>
+$(function() {
+    // Prepare
+    var History = window.History; // Note: We are using a capital H instead of a lower h
+    if ( !History.enabled ) {
+         // History.js is disabled for this browser.
+         // This is because we can optionally choose to support HTML4 browsers or not.
+        return false;
+    }
+
+    // Bind to StateChange Event
+    History.Adapter.bind(window,'statechange',function() { // Note: We are using statechange instead of popstate
+        var State = History.getState();
+        $('#user-content').load(State.url);
+        /* Instead of the line above, you could run the code below if the url returns the whole page instead of just the content (assuming it has a `#content`):
+        $.get(State.url, function(response) {
+            $('#content').html($(response).find('#content').html()); });
+        */
+        });
+
+
+    // Capture all the links to push their url to the history stack and trigger the StateChange Event
+    $('a').click(function(evt) {
+        evt.preventDefault();
+        History.pushState(null, $(this).text(), $(this).attr('href'));
+    });
+});
+</script>
 </body>
+
 </html>
