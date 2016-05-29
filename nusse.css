@@ -3,7 +3,8 @@ h1 {
   margin: 0.67em;
 }
 
-#information {
+.information {
+  float: inherit;
   text-align: center;
 }
 
@@ -29,11 +30,11 @@ h1 {
   font-weight: bold;
 }
 
-#schuldaten>tbody>tr>td:nth-child(odd) {
+.schuldaten>tbody>tr>td:nth-child(odd) {
   text-align: right;
 }
 
-#schuldaten>tbody>tr>td:nth-child(even) {
+.schuldaten>tbody>tr>td:nth-child(even) {
   text-align: left;
 }
 
