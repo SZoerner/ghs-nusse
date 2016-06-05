@@ -8,9 +8,17 @@
 
     <!-- Bootstrap minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
     <!-- specific stylesheet -->
     <link href="nusse.css" rel="stylesheet">
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Compiled and minified Bootstrap JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <!-- Path.js for client-side routing -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/path.js/0.8.4/path.min.js"></script>
+    <script src="routes.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -20,7 +28,7 @@
     <![endif]-->
 </head>
 
-<body onload="$('#user-content').load('unsere_schule.html');">
+<body>
     <div class="header">
         <div class="welcome">
             <img class="header-message header-left" src="images/schule_logo.png" /> Willkommen in der Grundschule Nusse
@@ -31,51 +39,51 @@
     <nav id="navigation" class="navbar navbar-default">
       <div id="navbar">
           <ul class="nav navbar-nav">
-              <li><a href="unsere_schule.html">Startseite</a></li>
-              <li><a href="schulleitung.html">Schulleitung</a></li>
+              <li><a href="#/startseite">Startseite</a></li>
+              <li><a href="#/schulleitung">Schulleitung</a></li>
               <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Unsere Schule<span class="caret"></span></a>
+                  <a href="#/schuldaten" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Unsere Schule<span class="caret"></span></a>
                   <ul class="dropdown-menu">
-                      <li><a href="schuldaten.html">Schuldaten</a></li>
-                      <li><a href="verwaltung.html">Verwaltung</a></li>
-                      <li><a href="raumplan.html">Raumplan</a></li>
-                      <!-- <li><a href="stundenplaene.html">Stundenpläne</a></li> -->
-                      <!-- <li><a href="fahrplaene.html">Fahrpläne</a></li> -->
+                      <li><a href="#/schuldaten">Schuldaten</a></li>
+                      <li><a href="#/verwaltung">Verwaltung</a></li>
+                      <li><a href="#/raumplan">Raumplan</a></li>
+                      <!-- <li><a href="#/stundenplaene">Stundenpläne</a></li> -->
+                      <!-- <li><a href="#/fahrplaene">Fahrpläne</a></li> -->
                   </ul>
               </li>
-              <li><a href="kollegium.html">Kollegium</a></li>
-              <li><a href="sozialarbeit.html">Schulsozialarbeit</a></li>
+              <li><a href="#/kollegium">Kollegium</a></li>
+              <li><a href="#/sozialarbeit">Schulsozialarbeit</a></li>
               <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Schulverein<span class="caret"></span></a>
                   <ul class="dropdown-menu">
-                      <li><a href="projekte.html">Projekte</a></li>
-                      <li><a href="allgemeines.html">Allgemeines</a></li>
-                      <li><a href="beitrittserklaerung.html">Formular</a></li>
-                      <li><a href="schulverein-einladung.html">Jahreshauptversammlung 2015</a></li>
+                      <li><a href="#/schulverein_projekte">Projekte</a></li>
+                      <li><a href="#/schulverein_allgemeines">Allgemeines</a></li>
+                      <li><a href="#/schulverein_beitrittserklaerung">Formular</a></li>
+                      <li><a href="#/schulverein_einladung">Jahreshauptversammlung 2015</a></li>
                   </ul>
               </li>
-              <!-- <li><a href="patengemeinschaft.html">Archiv</a></li> -->
+              <!-- <li><a href="#/patengemeinschaft">Archiv</a></li> -->
               <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projekte<span class="caret"></span></a>
                   <ul class="dropdown-menu">
-                      <li><a href="gesunde_schule.html">Gesunde Schule</a></li>
-                      <li><a href="trinkbrunnen.html">Trinkbrunnen</a></li>
-                      <li><a href="schulteich.html">Natur AG -Schulteich</a></li>
+                      <li><a href="#/gesunde_schule">Gesunde Schule</a></li>
+                      <li><a href="#/trinkbrunnen">Trinkbrunnen</a></li>
+                      <li><a href="#/schulteich">Natur AG -Schulteich</a></li>
                   </ul>
               </li>
-              <!-- <li><a href="einschulung_2016.html">Aktuelles</a></li> -->
-              <!-- <li><a href="wer_sind_wir.html">Schulprogramm</a></li> -->
-              <!-- <li><a href="hundertwasser.html">Schülerarbeiten</a></li> -->
+              <!-- <li><a href="#/einschulung_2016">Aktuelles</a></li> -->
+              <!-- <li><a href="#/wer_sind_wir">Schulprogramm</a></li> -->
+              <!-- <li><a href="#/hundertwasser">Schülerarbeiten</a></li> -->
               <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ganztagsschule<span class="caret"></span></a>
                   <ul class="dropdown-menu">
-                      <li><a href="ganztag_beschreibung.html">Beschreibung</a></li>
-                      <li><a href="ganztag_theatergruppe.html">Theatergruppe</a></li>
-                      <li><a href="ganztag_anmeldung.html">Anmeldeformular</a></li>
-                      <li><a href="ganztag_satzung.html">Satzung</a></li>
+                      <li><a href="#/ganztag_beschreibung">Beschreibung</a></li>
+                      <li><a href="#/ganztag_theatergruppe">Theatergruppe</a></li>
+                      <li><a href="#/ganztag_anmeldung">Anmeldeformular</a></li>
+                      <li><a href="#/ganztag_satzung">Satzung</a></li>
                   </ul>
               </li>
-              <li><a href="termine.html">Termine</a></li>
+              <li><a href="#/termine">Termine</a></li>
           </ul>
       </div>
     </nav>
@@ -85,16 +93,9 @@
     </div>
 
     <!-- main content -->
-    <div id="user-content" class="col-xs-9 col-xs-offset-2 main"></div>
+    <div id="content" class="col-xs-9 col-xs-offset-2 main"></div>
     <div class='col-xs-offset-11'></div>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Compiled and minified Bootstrap JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    <!-- History.js for URL and back/forward navigation -->
-    <script src="jquery.history.js"></script>
-    <script src="bind_history.js"></script>
 </body>
 
 </html>
