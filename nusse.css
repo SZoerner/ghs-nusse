@@ -29,6 +29,9 @@ h1 {
   font-weight: bold;
 }
 
+#schuldaten {
+  display: table;
+}
 .schuldaten>tbody>tr>td:nth-child(odd) {
   text-align: right;
 }
