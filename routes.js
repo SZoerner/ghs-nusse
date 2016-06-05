@@ -17,4 +17,9 @@ Path.rescue(notFound);
 $(document).ready(function(){
     // This line is used to start the PathJS listener.
     Path.listen();
+    // mark the currently selected page
+    $('#navbar li').click(function() {
+        $(this).siblings('li').removeClass('active');
+        $(this).addClass('active');
+    });
 });
