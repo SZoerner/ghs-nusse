@@ -63,6 +63,14 @@ img.mittel {
   text-align: left;
 }
 
+#sidebar {
+  background-image: url("images/haende.png");
+  /*background-repeat: repeat-y;*/
+  width: 18%;
+  height: 100%;
+  position:absolute;
+}
+
 .welcome {
   font-size: 2em;
   font-weight: bold;
