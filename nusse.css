@@ -1,14 +1,25 @@
+.block-content {
+  text-align: center;
+}
+
+.carouselImg img {
+  width: auto;
+  height: 600px;
+  max-height: 600px;
+}
+
+figcaption {
+  text-align: center;
+}
+
+figure {
+  float:left;
+  margin: 10px;
+}
+
 h1 {
   text-align: center;
   margin: 0.67em;
-}
-
-.information {
-  text-align: center;
-}
-
-.block-content {
-  text-align: center;
 }
 
 .header {
@@ -19,6 +30,18 @@ h1 {
 .header-message {
   height: 3em;
   margin: 15px;
+}
+
+img.gross {
+  width: 460px;
+}
+
+img.mittel {
+  width: 300px;
+}
+
+.information {
+  text-align: center;
 }
 
 .page-header {
@@ -40,31 +63,8 @@ h1 {
   text-align: left;
 }
 
-figure {
-  float:left;
-  margin: 10px;
-}
-
-figcaption {
-  text-align: center;
-}
-
-img.mittel {
-  width: 300px;
-}
-
-img.gross {
-  width: 460px;
-}
-
 .welcome {
   font-size: 2em;
   font-weight: bold;
   text-align: center;
-}
-
-.carouselImg img {
-  width: auto;
-  height: 600px;
-  max-height: 600px;
 }
