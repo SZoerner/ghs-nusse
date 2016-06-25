@@ -22,9 +22,12 @@ h1 {
   margin: 0.67em;
 }
 
-.header {
+#header-logo {
   background-image: url(images/bg_forest.jpg);
   background-repeat: no-repeat;
+  display: block;
+  text-decoration: none;
+  color: black;
 }
 
 .header-message {
