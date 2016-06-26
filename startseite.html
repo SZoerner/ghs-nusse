@@ -20,18 +20,24 @@
     </div>
 </div>
 
-<div class="information col-xs-offset-8 panel panel-default">
-    <div class="panel-heading">Aktuelles</div>
-    <ul class="list-group">
-        <li class="list-group-item">
-            <b><a href="#/adac_westen">Sicher zur Schule.</a></b>
-            <br />ADAC-Westen für unsere Erstklässler.
-        </li>
-        <li class="list-group-item">
-            <b><a href="#/gesundes_fruehstueck">Das gesunde Frühstück 2015</a></b>
-        </li>
-        <li class="list-group-item">
-            <b><a href="#/de_uhlenkiekers">Zusammenarbeit Schulgarten-AG <br /> und Möllner Werkstätten (Uhlenkiekers)</a></b>
-        </li>
-    </ul>
+<div class="col-xs-offset-8">
+  <div class="panel panel-default">
+    <div class="panel-heading"><center>Aktuelles</center></div>
+    <table id="aktuelles"class="table table-bordered"></table>
+  </div>
+    <nav>
+      <ul class="pager">
+        <button id="pager-previous" type="button" class="btn btn-primary">Neuer</button>
+        <button id="pager-next" type="button" class="btn btn-primary">Älter</button>
+      </ul>
+  </nav>
 </div>
+<script>
+  $('#pager-previous').click(function() {
+    $("#aktuelles").load("news/first.html");
+  });
+  $('#pager-next').click(function() {
+    $("#aktuelles").load("news/second.html");
+  });
+  $("#aktuelles").load("news/first.html");
+</script>
