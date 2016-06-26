@@ -30,6 +30,7 @@
 
 <body>
     <!-- header -->
+  <header>
     <div class="header">
       <a href="#/startseite" title="Willkommen in der Grundschule Nusse" id="header-logo">
         <div class="welcome">
@@ -39,7 +40,7 @@
       </a>
     </div>
     <!-- Fixed navbar -->
-    <nav id="navigation" class="navbar navbar-default">
+    <nav id="navigation" class="navbar navbar-default" role="navigation">
       <div id="navbar" class="container-fluid">
           <ul id="nav-left" class="nav navbar-nav">
               <li class="dropdown">
@@ -109,13 +110,15 @@
           </ul>
       </div>
     </nav>
-
+  </header>
+  <div class="main">
     <!-- left sidebar -->
     <div id="sidebar"></div>
     <!-- main content -->
-    <div id="content" class="col-xs-10 col-xs-offset-2 main"></div>
+    <div id="content" class="col-xs-10 col-xs-offset-2"></div>
     <!-- right sidebar -->
     <div class='col-xs-offset-11'></div>
+  </div>
 
 </body>
 </html>

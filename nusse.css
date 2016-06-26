@@ -43,6 +43,10 @@ img.mittel {
   width: 300px;
 }
 
+.menu-padding {
+    padding-top:70px;
+}
+
 .information {
   text-align: center;
 }
