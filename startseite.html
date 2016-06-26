@@ -27,7 +27,7 @@
   </div>
     <nav>
       <ul class="pager">
-        <button id="pager-previous" type="button" class="btn btn-primary">Neuer</button>
+        <button id="pager-previous" type="button" class="btn btn-primary" disabled="true">Neuer</button>
         <button id="pager-next" type="button" class="btn btn-primary">Älter</button>
       </ul>
   </nav>
@@ -35,9 +35,11 @@
 <script>
   $('#pager-previous').click(function() {
     $("#aktuelles").load("news/first.html");
+    $('.pager button').prop('disabled', function(i, v) { return !v; });
   });
   $('#pager-next').click(function() {
     $("#aktuelles").load("news/second.html");
+    $('.pager button').prop('disabled', function(i, v) { return !v; });
   });
   $("#aktuelles").load("news/first.html");
 </script>
