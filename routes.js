@@ -21,7 +21,7 @@ $(document).ready(function(){
     Path.listen();
     // mark the currently selected page
     $('#navbar li').click(function() {
-        $('#navbar').find('li').removeClass('active');
+        $(this).siblings('li').removeClass('active');
         $(this).addClass('active');
     });
     // sticky navbar
