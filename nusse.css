@@ -70,6 +70,10 @@ img.mittel {
   text-align: left;
 }
 
+.schulfrei {
+  color: red;
+}
+
 #sidebar {
   background-image: url("images/haende.png");
   background-repeat:no-repeat;
@@ -78,6 +82,9 @@ img.mittel {
   position:absolute;
 }
 
+.termine {
+  text-align: left;
+}
 .welcome {
   font-size: 2em;
   font-weight: bold;
