@@ -27,19 +27,27 @@
   </div>
     <nav>
       <ul class="pager">
-        <button id="pager-previous" type="button" class="btn btn-primary" disabled="true">1</button>
-        <button id="pager-next" type="button" class="btn btn-primary">2</button>
+        <button id="pager-first" type="button" class="btn btn-primary" disabled="true">1</button>
+        <button id="pager-second" type="button" class="btn btn-primary">2</button>
+        <button id="pager-third" type="button" class="btn btn-primary">3</button>
       </ul>
   </nav>
 </div>
 <script>
-  $('#pager-previous').click(function() {
+  $('#pager-first').click(function() {
     $("#aktuelles").load("news/first.html");
-    $('.pager button').prop('disabled', function(i, v) { return !v; });
+    $('.pager button').prop('disabled', false);
+    $(this).prop('disabled', true);
   });
-  $('#pager-next').click(function() {
+  $('#pager-second').click(function() {
     $("#aktuelles").load("news/second.html");
-    $('.pager button').prop('disabled', function(i, v) { return !v; });
+    $('.pager button').prop('disabled', false);
+    $(this).prop('disabled', true);
+  });
+  $('#pager-third').click(function() {
+    $("#aktuelles").load("news/third.html");
+    $('.pager button').prop('disabled', false);
+    $(this).prop('disabled', true);
   });
   $("#aktuelles").load("news/first.html");
 </script>
