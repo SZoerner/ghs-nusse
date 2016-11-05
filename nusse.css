@@ -43,6 +43,10 @@ img.mittel {
   width: 300px;
 }
 
+.portraet img {
+  max-height: 290px;
+}
+
 .menu-padding {
   padding-top:70px;
 }
