@@ -51,8 +51,9 @@ img.mittel {
   padding-top:70px;
 }
 
-.information {
+.information table td:first-child {
   text-align: center;
+  width: 15%;
 }
 
 .page-header {
@@ -86,9 +87,6 @@ img.mittel {
   position:absolute;
 }
 
-.termine {
-  text-align: left;
-}
 .welcome {
   font-size: 2em;
   font-weight: bold;
