@@ -1,123 +1,31 @@
-<h1>Termine</h1>
-
-<div class="information col-xs-6 termine">
-    <div class="panel panel-default">
-        <div class="panel-heading">Dezember 2017</div>
-        <table class="table table-condensed table-bordered">
-            <tr>
-                <td>21.</td>
-                <td>Erster Tag der Weihnachtsferien</td>
-            </tr>
-        </table>
-    </div>
-
-    <div class="panel panel-default">
-        <div class="panel-heading">Januar 2018</div>
-        <table class="table table-condensed table-bordered">
-            <tr>
-                <td>05.</td>
-                <td>Erster Schultag nach den Weihnachtsferien</td>
-            </tr>
-        </table>
-    </div>
-
-    <div class="panel panel-default">
-        <div class="panel-heading">Februar 2018</div>
-        <table class="table table-condensed table-bordered">
-            <tr>
-                <td>22. und 23.</td>
-                <td>Bewegliche Ferientage</td>
-            </tr>
-        </table>
-    </div>
-	
-	<div class="panel panel-default">
-      <div class="panel-heading">März 2018</div>
-      <table class="table table-condensed table-bordered">
-          <tr>
-              <td>29.</td>
-              <td>Erster Tag der Osterferien</td>
-          </tr>
-      </table>
+<div class="col-xs-offset-8">
+  <div class="panel panel-default">
+    <div class="panel-heading"><center>Aktuelles</center></div>
+    <table id="aktuelles"class="table table-bordered"></table>
   </div>
-  
-    <div class="panel panel-default">
-        <div class="panel-heading">April 2018</div>
-        <table class="table table-condensed table-bordered">
-            <tr>
-                <td>13.</td>
-                <td>Erster Schultag nach den Osterferien</td>
-            </tr>
-			<tr>
-                <td>30.</td>
-                <td>Beweglicher Ferientag</td>
-            </tr>
-        </table>
-    </div>
+    <nav>
+      <ul class="pager">
+        <button id="pager-first" type="button" class="btn btn-primary" disabled="true">1</button>
+        <button id="pager-second" type="button" class="btn btn-primary">2</button>
+        <button id="pager-third" type="button" class="btn btn-primary">3</button>
+      </ul>
+  </nav>
 </div>
-
-<div class="information col-xs-offset-6">
-     <div class="panel panel-default">
-        <div class="panel-heading">Mai 2018</div>
-        <table class="table table-condensed table-bordered">
-            <tr>
-                <td>11.</td>
-                <td>Beweglicher Ferientag</td>
-            </tr>
-        </table>
-    </div>
-
-    <div class="panel panel-default">
-        <div class="panel-heading">Juli 2017</div>
-        <table class="table table-condensed table-bordered">
-            <tr>
-                <td>09.</td>
-                <td>Erster Tag der Sommerferien</span></td>
-            </tr>
-        </table>
-    </div>
-
-    <div class="panel panel-default">
-        <div class="panel-heading">August 2018</div>
-        <table class="table table-condensed table-bordered">
-            <tr>
-                <td>17.</td>
-                <td>Erster Schultag nach den Sommerferien</td>
-            </tr>
-        </table>
-    </div>
-	
-    <div class="panel panel-default">
-        <div class="panel-heading">September 2018</div>
-        <table class="table table-condensed table-bordered">
-            <tr>
-                <td>01.</td>
-                <td>Erster Tag der Herbstferien</td>
-            </tr>
-			<tr>
-                <td>19.</td>
-                <td>Erster Schultag nach den Herbstferien</td>
-            </tr>
-        </table>
-    </div>
-	
-    <div class="panel panel-default">
-        <div class="panel-heading">Dezember 2018</div>
-        <table class="table table-condensed table-bordered">
-            <tr>
-                <td>21.</td>
-                <td>Erster Tag der Herbstferien</td>
-            </tr>
-        </table>
-    </div>
-	
-    <div class="panel panel-default">
-        <div class="panel-heading">Januar 2019</div>
-        <table class="table table-condensed table-bordered">
-            <tr>
-                <td>04.</td>
-                <td>Erster Schultag nach den Weihnachtsferien</td>
-            </tr>
-        </table>
-    </div>
-</div>
+<script>
+  $('#pager-first').click(function() {
+    $("#aktuelles").load("news/first.html");
+    $('.pager button').prop('disabled', false);
+    $(this).prop('disabled', true);
+  });
+  $('#pager-second').click(function() {
+    $("#aktuelles").load("news/second.html");
+    $('.pager button').prop('disabled', false);
+    $(this).prop('disabled', true);
+  });
+  $('#pager-third').click(function() {
+    $("#aktuelles").load("news/third.html");
+    $('.pager button').prop('disabled', false);
+    $(this).prop('disabled', true);
+  });
+  $("#aktuelles").load("news/first.html");
+</script>
