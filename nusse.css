@@ -39,6 +39,13 @@ img.gross {
   width: 460px;
 }
 
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
 img.mittel {
   width: 300px;
 }
